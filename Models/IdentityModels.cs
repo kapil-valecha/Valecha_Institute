@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -13,7 +14,6 @@ namespace Institute.Models
         [Display(Name ="Full Name"),Required]
         [StringLength(100)]
         public string FullName {get; set;}
-        public bool Gender { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -21,6 +21,11 @@ namespace Institute.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        //public static implicit operator ApplicationUser(ApplicationUser v)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 
     public class ApplicationRole : IdentityRole

@@ -11,10 +11,10 @@ namespace Institute.Models
 
         public RoleViewModel(ApplicationRole role)
         {
-            Id = role.Id;
+            RoleId = role.Id;
             Name = role.Name;
        }
-        public string Id { get; set; }
+        public string RoleId { get; set; }
         public string Name { get; set; }
     }
 }

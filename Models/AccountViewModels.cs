@@ -63,7 +63,7 @@ namespace Institute.Models
     }
 
     public class RegisterViewModel
-    {
+    {   [Key]
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -82,8 +82,7 @@ namespace Institute.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-        public bool Gender { get; set; }
-        public string RoleName { get; set; }
+        public int RoleId { get; set; }
     }
 
     public class ResetPasswordViewModel

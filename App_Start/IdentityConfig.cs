@@ -86,6 +86,11 @@ namespace Institute
             }
             return manager;
         }
+
+        internal Task<IdentityResult> AddToRoleAsync(string id, int roleId)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     // Configure the application sign-in manager which is used in this application.
